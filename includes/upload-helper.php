@@ -6,7 +6,7 @@ session_start();
 define('KB', 1024);
 define('MB', 1048576);
 
-if (isset($_POST['prof_submit'])) {
+if (isset($_POST['prof-submit'])) {
 
     $uname = $_SESSION['uname'];
     $file = $_FILES['prof-image'];

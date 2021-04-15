@@ -11,7 +11,7 @@ require 'includes/dbhandler.php';
     }
 
     function preview(e) {
-        if (e, files[0]) {
+        if (e.files[0]) {
             var reader = new FileReader();
             reader.onload = function(e) {
                 document.querySelector('#gallery-display').setAttribute('src', e.target.result);
@@ -28,7 +28,7 @@ if(isset ($_SESSION['uid'])) {
         <div class="my-auto">
             <form action="includes/gallery-helper.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <img src="images/c3.jpg" alt="profile pic" onclick="triggered();" id="gallery-display">
+                    <img src="images/silhouette.jpg" alt="profile pic" onclick="triggered();" id="gallery-display">
                     <input type="text" name="title" class="form-control" placeholder="title">
                     <input type="file" name="gallery-image" id="gallery-image" onchange="preview(this)" class="form-control" style="display: none;">
                 </div>

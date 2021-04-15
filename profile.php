@@ -11,7 +11,7 @@ require 'includes/dbhandler.php';
     }
 
     function preview(e) {
-        if (e, files[0]) {
+        if (e.files[0]) {
             var reader = new FileReader();
             reader.onload = function(e) {
                 document.querySelector('#prof-display').setAttribute('src', e.target.result);
